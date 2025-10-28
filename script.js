@@ -1,3 +1,15 @@
+// Check if mobile device
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+           (window.innerWidth <= 768);
+}
+
+// Show mobile warning if on mobile device
+if (isMobileDevice()) {
+    document.getElementById('mobile-warning').style.display = 'flex';
+    document.getElementById('playground').style.display = 'none';
+}
+
 // Get references to elements
 const playground = document.getElementById('playground');
 const fly = document.getElementById('fly');
